@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Synctax : localStorage.setItem("key"  ,  "value");
+   // Synctax : localStorage.getItem("key");
+   // Synctax : localStorage.removeItem("key"); -- Both key and value in localStorage is remove;
+  // Synctax : localStorage.clear(); -- Clear everything in LocalStorage;
+
+
+
+
+
+    // store Numbers in LOcal storage;
+    // EVerything is stored in form of String in LocalStorage;
+    localStorage.setItem("roll_no",123465);
+    localStorage.setItem("mob_no", "194578");
+    
+    localStorage.setItem("Name1", "Tushar");
+    localStorage.setItem("Name2", "Nilesh");
+
+
+
+    //Get Stored Numbers in Local storage;
+     var x = localStorage.getItem("roll_no");
+     console.log(x);
+     console.log(typeof(x));
+
+
+     var y = localStorage.getItem("mob_no");
+     console.log(y);
+     console.log(typeof(y));
+
+     var Name1 = localStorage.getItem("Name1");
+     console.log(Name1);
+
+// -----------------------------------------------------
+
+
+//  if we want to store obj\ array it will store in form of STRING only;
+// so following is the wway you can store in it
+
+
+//Array ;
+var arr = ["html", "CSS", "js", "react"];
+localStorage.setItem("WEB", arr);
+// it is in string Format;
+//OBject; 
+var obj = { name: "Tushar", place: "xyz" }
+localStorage.setItem("Student", obj);
+// it is store in form [object, Object];
+
+// ------------------------------------------------------
+
+//  JSON :
+// syntax : // Convert JSON string:
+            //   JSON.stringify(obj);
+
+            // Convert Back To Objects ;
+            //JSON.parse(data);
+
+            // Whenever you srnding data to local storage use :(JSON.stringify) :
+//ARRAY; 
+var arr1 = ["html1", "CSS1", "js1", "react1"];
+arr1 = JSON.stringify(arr1);
+localStorage.setItem("WEB1", arr1);
+
+// Object;
+var obj1 = { name: "Tushar1", place: "xyz1"}
+obj1 = JSON.stringify(obj1)
+localStorage.setItem("Student1", obj1);
+
+            // Call BAck Converting JSON to Objects (Parse);
+// whenever you reciving data from Local storage use : (JSON.parse) : 
+
+var arr1 = localStorage.getItem("WEB1");
+arr1 = JSON.parse(arr1);
+console.log(arr1);
+
+var obj1 = localStorage.getItem("Student1");
+obj1 = JSON.parse(obj1);
+console.log(obj1.place);
+// ---------------------------------------------------------------
+
+var object  = { scl: "ShishuVikas",
+                pincode: 400070};
+//store in Local storage 
+                object = localStorage.setItem("School", JSON.stringify(object));
+                 var object1 = JSON.parse(localStorage.getItem("School")); 
+                console.log(object1);
+                console.log(object1.scl);
+                console.log(object1.pincode);
+
+
+
+</script>

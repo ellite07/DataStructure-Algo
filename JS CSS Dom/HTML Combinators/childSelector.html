@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  Syntax for Decendant selector  (selector 1  selector2) */
+
+        #container p {
+            background-color: lightpink;
+        }
+
+        /*  Syntax for Child selector  (selector 1 > selector2) */
+
+        #container1>p {
+            background-color: rgb(102, 83, 85);
+
+        }
+
+
+        #container2>p {
+            background-color: lightslategray;
+        }
+
+
+
+        #container3 {
+            display: inline-flex;
+        }
+
+        #container3>div {
+            background-color: lightsalmon;
+            height: 150px;
+            width: 150px;
+            margin: 5px;
+        }
+
+
+
+        /*  Syntax for General Sibling selector  (selector 1 ~ selector2) */
+        /*  Gen. Sibling is son's of same parents(Real sis-Bro) */
+
+        #container4 ~ p{
+            background-color: lightpink;
+        }
+
+        /*  Syntax for Adjacent Sibling selector  (selector 1 + selector2) */
+        /*  Adjacent Sibling : Imijiate son's of same parents(Juat next real sis-Bro) */
+        #container5 + div{
+            font-size: 20px;
+            background-color: lemonchiffon;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Decendant selector</p>
+    <p>Apply every decendant element</p>
+
+    <div id="container">
+        <p>
+            I am p1;( p is child of container)
+        </p>
+        <div>
+            <p>I am p2;(child of div , decenedant of container)</p>
+        </div>
+    </div>
+
+
+
+    <hr>
+
+
+    <p>Child selector</p>
+    <p> Child selector : Only apply after parent-son</p>
+
+    <div id="container1">
+        <p>
+            I am p1;( p is child of container)
+        </p>
+        <div>
+            <p>I am p2;(child of div , decenedant of container)</p>
+        </div>
+    </div>
+    <hr>
+    <div id="container2">
+
+        <p> I am p1 child of container-p1</p>
+        <p> I am p2 child of container-p2</p>
+        <p> I am p3 child of container-p3</p>
+        <div>
+            <p> I am p4 child of div-p1; decendant of container2</p>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div id="container3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <hr>
+
+    <p> General siblinng</p>
+    <div>
+        <p id="container4">I am p1</p>
+        <p>I am p2 ; Ganeral sibling of p1p2p3 and adjacent sibling of p1</p>
+        <p>I am p3; Ganeral sibling of p1p2p3 and adjacent sibling of p2</p>
+        <p>I am p4; Ganeral sibling of p1p2p3 and adjacent sibling of p3</p>
+        <h1>I am h1</h1>
+    </div>
+    <div>
+        <p>i am p5</p>
+        <p>i am p6</p>
+        <p>i am p7</p>
+    </div>
+
+<hr>
+    <p> Decent/Adjacent siblinng</p>
+    <div id="container5">
+        <p >I am p1</p>
+        <p>I am p2 ; Ganeral sibling of p1p2p3 and adjacent sibling of p1</p>
+        <p>I am p3; Ganeral sibling of p1p2p3 and adjacent sibling of p2</p>
+        <p>I am p4; Ganeral sibling of p1p2p3 and adjacent sibling of p3</p>
+        <h1>I am h1</h1>
+    </div>
+    <div>
+        <p>i am p5</p>
+        <p>i am p6</p>
+        <p>i am p7</p>
+    </div>
+
+</body>
+
+</html>

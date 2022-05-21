@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            display: flex;
+            background-color: rgb(28, 41, 56);
+            color: white;
+            height: 50px;
+            padding: 25px 0 0 20px;
+            border-radius: 20px;
+        }
+
+        .left {
+            width: 50%;
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">Reebok</div>
+        <div class="right">
+            <!-- methid 1 -->
+            <div id="about">
+                <a target="_blank" href="about.html">About</a>
+            </div>
+            <div id="men">
+                <a>Men</a>
+            </div>
+            <!-- method 02 -->
+            <div onclick="window.location.href='women.html'">
+                <a target="_blank" href="women.html">Women</a>
+            </div>
+            <div id="login">
+                <a>Log In</a>
+            </div>
+            <div id="signUp">
+                <a>Sign Up</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+        // Method : 03 {getElementById}
+    document.getElementById("men").addEventListener("click", function () {
+        window.location.href = "men.html"
+    })
+    document.getElementById("login").addEventListener("click", function () {
+        window.location.href = "login.html"
+    })
+    document.getElementById("signUp").addEventListener("click", function () {
+        window.location.href = "signUp.html"
+    })
+</script>

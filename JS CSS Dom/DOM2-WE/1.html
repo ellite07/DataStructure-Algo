@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin: auto;
+            width: 100%;
+            height: 720px;
+            display: flex;
+            padding-top:150px
+        }
+
+        #container > div{
+            border: 1px solid red;
+            margin: 0 20px;
+            
+        }
+
+        div :nth-child(1){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+        }
+        div :nth-child(1){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: grey;
+        }
+        div :nth-child(2){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: green;
+        }
+        div :nth-child(3){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+        }
+        div :nth-child(4){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+        }
+        div :nth-child(5){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+        }
+        div :nth-child(6){
+            border-radius: 4px;
+            border: 1px solid red;
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+        }
+
+         a{
+
+             text-decoration: none;
+            font-family: sans-serif;
+            color: azure;
+
+         }
+
+
+
+
+
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var arr = [
+        {
+        name:"primary"
+    },
+        {
+        name:"Secondary"
+    },
+        {
+        name:"Sucess"
+    },
+        {
+        name:"Danger"
+    },
+        {
+        name:"Warning"
+    },
+        {
+        name:"Info"
+    },
+    ];
+
+    arr.map(function(elem){
+
+        var btn1= document.createElement("div")
+        btn1.setAttribute("id", "button")
+        var link1 = document.createElement("a")
+        link1.setAttribute("href","#")
+        link1.textContent = elem.name
+
+        btn1.append(link1)
+
+        // div.append(btn1)
+
+        document.querySelector("#container").append(btn1)
+
+    })
+    
+</script>

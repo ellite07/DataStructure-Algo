@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script SetTimeOut/ ClearTimeOut / interval /clear Interval</title>
+</head>
+<body>
+    <h3 class="container">Java script SetTimeOut/ ClearTimeOut / interval /clear Interval</h3>
+
+    <div id="timer">The Time is ,<span id="time"></span></div>
+    <script>
+        console.log('This is Java script SetTimeOut and ClearTimeOut');
+
+        // SetTimeOut -- > allow ust o run function once aafter interVal of time;
+        // Clear timeOut -->allow ust o run function repeatedly after interVal of time;
+
+
+        function greet1(){
+            console.log('Hello')
+        }
+        setTimeout(greet1, 2500);     //Dont calll function insie setTomeOut wrong greed()
+// or
+
+        function greet(name){
+            console.log('Hello' , name)
+        }
+        timeot = setTimeout(greet, 3000,"Tushar");
+
+        clearTimeout(timeot);// if you want to stop set timeout give it an id /variable &call in clearTimeout
+
+// OR
+
+        function greet3(name,drink){
+            console.log('Comon' , name , 'Now' , 'Drink your' , drink)
+        }
+        setTimeout(greet3,3500,"Tushar","Milkshake");
+
+// Or
+
+        setTimeout((greet2) => {
+            console.log('take care')
+        }, 4000);
+
+// sET Interval
+
+function greet5(){
+            console.log('Hello')
+        }
+intervalId = setInterval(greet5, 2000);
+// clear Interval
+clearInterval(intervalId)
+
+function greet4(name,number){
+            console.log('Hello' , name , number)
+        }
+setInterval(greet4,2000,"Tushar","9004322729")
+
+
+
+// Display
+function DisplayTime(){
+    timee= new Date();
+    console.log(time);
+    document.getElementById('time').innerHTML = timee;
+}
+
+setInterval(DisplayTime,1000)
+    </script>
+</body>
+</html>

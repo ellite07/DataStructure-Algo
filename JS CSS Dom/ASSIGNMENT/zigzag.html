@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #container {
+        width: 70%;
+        height: 580px;
+        background-color: white;
+        padding: 0px;
+        padding-top: 50px;
+        /* border: 1px solid red; */
+        justify-self: center;
+        margin: auto;
+        margin-top: 50px;
+      }
+      #container > div {
+        width: 50%;
+        height: 20%;
+        display: flex;
+        /* border: 1px solid red; */
+        margin: auto;
+        margin-top: 50px;
+        justify-content: space-between;
+      }
+      #row > div {
+        background-color: rgb(50, 139, 132);
+        border-radius: 5px;
+        width: 100px;
+      }
+      .row1 > div:nth-child(2) {
+        flex-basis: 250px;
+      }
+      .row2 > div:nth-child(1) {
+        flex-basis: 250px;
+      }
+      .row3 > div:nth-child(3) {
+        flex-basis: 250px;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="row" class="row1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="row" class="row2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="row" class="row3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 02</title>
+</head>
+<body>
+    <button onclick="myfunct()">Click Me</button>
+    <button onclick="myfunct2()">PopUpAlarm</button>
+    <button onclick="myfunct3()">Submit</button>
+
+    <div id="container">I am Div</div>
+    <div id="masai">I am Masai Div</div>
+    <div id="School"><span>I am School Div</span></div>
+
+
+</body>
+</html>
+
+<script>
+    //js shkould be written here 
+
+    var count =0;
+function myfunct(){
+    console.log("clicked");
+    count++;
+    console.log(count);
+}
+
+
+function myfunct2(){
+    alert("This is Pop Up msg")
+}
+
+function myfunct3(){
+    alert("Form Is Submitted")
+}
+
+console.log(document.getElementById("container"));
+
+console.log(document.getElementById("masai"));
+
+console.log(document.getElementById("School").textContent);
+
+console.log(document.getElementById("School").innerHTML);
+
+</script>

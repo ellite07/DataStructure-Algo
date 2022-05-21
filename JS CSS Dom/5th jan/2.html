@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 100px 200px;
+            grid-gap: 20px;
+            
+            grid-template-areas: 
+            "n n n n n n n n n n n n"
+            "b1 b1 b1 b2 b2 b3 b3 b3 b4 b4 b4"
+        }
+        .nav{
+            grid-area: n;
+            background-color: yellow;
+        }
+        .box1{
+            grid-area: b1;
+            background-color: red;
+
+        }
+        .bax2{
+            grid-area: b2;
+            background-color: green;
+
+        }
+        .bax3{
+            grid-area: b3;
+            background-color: blue;
+
+        }
+        .bax4{
+            grid-area: b4;
+            background-color: grey;
+
+        }
+        @media only screen and (min-width: 321px) and (max-width: 720px){
+        #container{
+            grid-template-rows: 100px 200px 200px;
+            grid-template-areas: 
+            "n n n n n n n n n n n n";
+            
+        }            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+
+    <div></div>
+</body>
+</html>

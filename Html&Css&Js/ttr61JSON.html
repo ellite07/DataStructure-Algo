@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <h3>JSON</h3>
+    <div class="container">This is my container</div>
+    <script>
+        let JsonObj = {
+            name : "Tushar",
+            channel : "Code With Harry",
+            fiends : "Good",
+        }
+        console.log("object in Normal Form",JsonObj);
+
+        let myJson_str = JSON.stringify(JsonObj);
+        console.log("Object in string form",myJson_str);
+
+        //Now i can do all the operation that can do on string;
+        let relaceName = myJson_str.replace('Tushar','Nilesh');
+        console.log("replace Tushar with NIlesh",relaceName);
+
+        console.log("Lengrth of object =",relaceName.length);
+
+        // convertmng Json string to object;
+
+        let new_myJson_str = JSON.parse(relaceName);
+        console.log("convertmng Json string to object:", new_myJson_str) 
+    </script>
+</body>
+</html>

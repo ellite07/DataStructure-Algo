@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* By Default for large screen */
+
+        #container {
+            display :grid;
+            background-color: blueviolet;
+        }
+
+        body {
+            background-color: teal;
+        }
+        
+        h1 {
+            font-size: 25px;
+            color: firebrick;
+        }
+
+        
+        /* For smalll screen */
+
+        @media only screen and (min-width:0px) and (max-width:320px) {
+            body {
+                background-color: red;
+            }
+
+            h1 {
+                font-size: 75px;
+                color: orange;
+            }
+        }
+
+
+
+        /* For Medium Screen */
+        @media only screen and (min-width:321px) and (max-width:720px) {
+            body {
+                background-color: orange;
+            }
+
+            h1 {
+
+                font-size: 40px;
+                color: orchid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+    </div>
+
+    <h1>H1 You are special</h1>
+
+</body>
+
+</html>

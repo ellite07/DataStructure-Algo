@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <input id="user" type="text" placeholder="Enter Username">
+        <input id="pass" type="passward" placeholder="Enter passward">
+        <input type="submit" value="Log in" />
+    </form>
+</body>
+</html>
+
+<script>
+    //  Add eventListner create an Event in function , like Submit/click when we do that operation function will work         
+    document.querySelector("form").addEventListener("submit",signIn);
+
+    var regUsers = JSON.parse(localStorage.getItem("UserDataBase"));
+
+     console.log(regUsers);
+
+    function signIn(event){
+        //prevent deault screen from refresh;
+        event.preventDefault();
+ 
+        var pass = document.querySelector("#pass").value;
+        var user = document.querySelector("#user").value;
+            // where regUser is my data All people sign in with passward;
+            var count = 0;
+            for(var i=0; i<regUsers.length; i++){
+            console.log(regUsers[i].userName, regUsers[i].passwd);
+
+            if(regUsers[i].userName == user  && regUsers[i].passwd == pass){
+               count++;
+            }
+        }
+        // count=1 similar sign in data found  
+        if(count == 1){
+            alert("Log in suceesfullly");
+            window.location.href="home.html";
+        }
+    }
+</script>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            width: 50%;
+            height: auto;
+            border: red 2px solid;
+            margin: auto;
+            margin-top: 60px;
+            padding: 20px 100px 20px 100px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 25px;
+            grid-area:
+                "a b "
+                "d e f"
+                "g h i";
+
+        }
+
+        .cards {
+            background-color: white;
+            padding: 0% 6% 0% 6%;
+            height: 150px;
+            border-radius: 6px;
+            box-shadow: #cebca9 0px 20px 50px -20px,rgba(0, 0, 0, 0) 0px 30px 0px 30px;
+            }
+
+        .line1 {
+            display: flex;
+            justify-content: space-between;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* padding: 0% 2% 0% 2%; */
+            font-size: 11px;
+            margin-top: 7px;
+            margin-bottom: 0px;
+            font-weight:normal;
+        }
+        h3{
+            color: #B68734;
+            font-size: 16px;
+        }
+        p{
+            color: grey;
+        }
+
+        #container>div:nth-child(1) {
+            grid-area: "a";
+        }#container>div:nth-child(2) {
+            grid-area: "b";
+        }        #container>div:nth-child(3) {
+            grid-area: "c";
+        }        #container>div:nth-child(4) {
+            grid-area: "d";
+        }        #container>div:nth-child(5) {
+            grid-area: "e";
+        }        #container>div:nth-child(6) {
+            grid-area: "f";
+        }        #container>div:nth-child(7) {
+            grid-area: "g";
+        }        #container>div:nth-child(8) {
+            grid-area: "h";
+        }        #container>div:nth-child(9) {
+            grid-area: "i";
+        }
+
+         @media only screen and (min-width: 0px) and (max-width: 450px) {
+       body{
+           margin-top: 0px;
+       }
+
+        #container {
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 2px 10px 0px 10px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            grid-area:
+                "a"
+                "b"
+                "c"
+                "d"
+                "e"
+                "f"
+                "g"
+                "h"
+                "i";
+        }
+
+        .cards {
+            height: 120px;
+            }
+
+        .line1 {
+            font-size: 10px;
+            margin-top: 7px;
+            margin-bottom: 0px;
+            font-weight:normal;
+        }
+        h3{
+            color: #B68734;
+            font-size: 16px;
+        }
+        p{
+            color: grey;
+            font-size: 12px;
+        }
+
+        #container>div:nth-child(1) {
+            grid-area: "a";
+        }#container>div:nth-child(2) {
+            grid-area: "b";
+        }        #container>div:nth-child(3) {
+            grid-area: "c";
+        }        #container>div:nth-child(4) {
+            grid-area: "d";
+        }        #container>div:nth-child(5) {
+            grid-area: "e";
+        }        #container>div:nth-child(6) {
+            grid-area: "f";
+        }        #container>div:nth-child(7) {
+            grid-area: "g";
+        }        #container>div:nth-child(8) {
+            grid-area: "h";
+        }        #container>div:nth-child(9) {
+            grid-area: "i";
+        }    
+    
+    } 
+
+         @media only screen and (min-width: 450px) and (max-width: 850px) {
+
+            #container {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px 10px 20px 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+            grid-area:
+                "a b"
+                "c d"
+                "e f"
+                "g h"
+                "i";
+
+        }
+
+        .cards {
+            background-color: white;
+            padding: 0% 6% 0% 6%;
+            height: 120px;
+            border-radius: 6px;
+            box-shadow: #cebca9 0px 20px 50px -20px,rgba(0, 0, 0, 0) 0px 30px 0px 30px;
+            }
+
+        #container>div:nth-child(1) {
+            grid-area: "a";
+        }#container>div:nth-child(2) {
+            grid-area: "b";
+        }        #container>div:nth-child(3) {
+            grid-area: "c";
+        }        #container>div:nth-child(4) {
+            grid-area: "d";
+        }        #container>div:nth-child(5) {
+            grid-area: "e";
+        }        #container>div:nth-child(6) {
+            grid-area: "f";
+        }        #container>div:nth-child(7) {
+            grid-area: "g";
+        }        #container>div:nth-child(8) {
+            grid-area: "h";
+        }        #container>div:nth-child(9) {
+            grid-area: "i";
+        }
+        
+    } 
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="cards">
+            <div class="line1">
+                <h2>Cappuccino</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Americano</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Esparsso</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Macchiato</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="cards">
+            <div class="line1">
+                <h2>Mocho</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Coffee Latte</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Piccollo Latte</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Restretto</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+        <div class="cards">
+            <div class="line1">
+                <h2>Affogato</h2>
+                <h3>$49</h3>
+            </div>
+            <p>Usage of Internet is becoming more common due to rapid advance</p>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

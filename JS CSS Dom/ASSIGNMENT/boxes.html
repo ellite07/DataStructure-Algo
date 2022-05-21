@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #container{
+            background-color: white;
+            width: 800px;
+            height: 300px;
+            margin:auto;
+            padding: 120px 50px 120px 50px;
+            justify-self: center;
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            row-gap: 30px;
+            grid-template-areas:  
+            "a b c d e"
+            "h i j k l";
+        }
+        #container > div{
+            background-color: #217867;
+            width: 130px;
+            height: 130px;
+            margin: auto;
+            justify-content:center;
+            border-radius: 3px;
+        }
+        /* Small Screen */
+        @media only screen and (min-width: 0px) and (max-width: 450px) {
+
+            #container{
+                width: 200px;
+                height: auto;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(10,1fr);
+            row-gap: 30px;
+            grid-template-areas:  
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f"
+            "g"
+            "h"
+            "i"
+            "j"
+            }
+        }
+            /* Small Screen */
+        @media only screen and (min-width: 451px) and (max-width: 800px) {
+
+            #container{
+                width: 500px;
+                height: auto;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,1fr);
+            row-gap: 30px;
+            grid-template-areas:  
+            "a b c"
+            "d e f"
+            "g h i"
+            }
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+        <div class="box10"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  Syntax for Decendant  (selector 1  selector2) */
+        div p {
+            background-color:
+                lightgrey;
+        }
+
+        div h1 {
+            font-size:
+                18px;
+            background-color:
+                lightgreen;
+        }
+        .container *{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--$  4 types of different combinators in CSS-->
+    <P>
+        4 types of different combinators in CSS
+        <li>Descendant selector(space)</li>
+        <li>Child selectors(>)</li>
+        <li>general sibling selector(~)</li>
+        <li>adjacent sibling selector(+)</li>
+    </P>
+    <p>Descendant selector(space)<br>Every decenedant iside div will get that property</p>
+
+    <div>
+        <p>
+            i am p1; (decenedant of div p);
+        </p>
+        <p>
+            i am p2; (decenedant of div p)
+        </p>
+
+
+
+        <div>
+            <p>
+            <div>
+                <p>i am p3, ( decenedant of div p div p )</p>
+            </div>
+            </p>
+        </div>
+       
+       
+       
+        <h1>
+            i am h1; (decenedant of div h1)
+        </h1>
+
+
+
+        <span>
+            <p>
+                i m p3; (decenedant of div span p)
+            </p>
+        </span>
+<body>
+    <p>Head style *container (* is universal selctor)<br>Select each and every character/ thing</p>
+    <div class="container">
+        <h1> I am h1(h1 is decenedant of container)</h1>
+        <h2>i am h2</h2>
+    </div>
+</body>
+
+
+        
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulate</title>
+
+</head>
+<body>
+    <div id="main"   class="container" >
+        <ul id="nav"> 
+            <li>Home</li>
+            <li>About</li>
+            <li>contact</li>
+            <li>Serrvice</li>
+        </ul>
+    </div>
+            <!-- Another class  div-->
+    <div class="container">
+        <ul id="nav"> 
+            <li>Home</li>
+            <li>About</li>
+            <li>contact</li>
+            <li>Serrvice</li>
+        </ul>
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        console.log("id of main",main);
+        // check browser inspect console & refresh once;
+        let nav = document.getElementById('nav');
+        console.log("id of nav",nav);
+
+        // we can  similar by class;
+        let containers = document.getElementsByClassName('container');
+        console.log("give all characters of class container in array",containers); 
+        console.log("give 0th index class",containers[0]);   
+        console.log("give 1st index class",containers[1]); 
+
+        // selector ;
+        let selector = document.querySelector('.container');
+        console.log("1st selector of class container",selector);
+
+
+        let selector2 = document.querySelectorAll('.container');
+        console.log("All selector of class container",selector2);
+
+        let selector3 = document.querySelector('#nav>li');
+        console.log("1st selector of id nav 'inside line'",selector3);
+
+        let selector4 = document.querySelectorAll('#nav>li');
+        console.log("All selector of id nav 'inside line'",selector4);
+
+
+    </script>
+</body>
+</html>

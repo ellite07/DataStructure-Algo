@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            height: 500px;
+            border: 1px solid red;
+            padding: 5%;
+        }
+
+        #container>div {
+            margin: auto;
+            height: 450px;
+            width: 45%;
+            border: 1px solid red
+        }
+
+        tr,td,th{
+        border: 1px solid;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <select name="" id="">
+            <option value="electronic" id="sel1">Electronic</option>
+            <option value="furniture" id="sel2">Furniture</option>
+            <option value="Home appliance" id="sel3">Home applince</option>
+            </select>
+        </form>
+    </div>
+
+
+
+
+
+    <div id="container">
+        <div id="form"></div>
+        <div id="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Catergory</th>
+                        <th>Title</th>
+                        <th>Describe</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>Nrupul</td>
+                        <td>100</td>
+                        <td>90</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</body>
+
+</html>
+
+<script>
+
+var tr = document.createElement('tr');
+
+var td1 = document.createElement('td');
+td1.textContent = "dwd";
+
+var td2 = document.createElement('td');
+td2.textContent = "dwd";
+
+var td3 = document.createElement('td');
+td3.textContent  = "";
+
+tr.append(td1, td2, td3);
+
+document.querySelectorAll("#container > #table > table > tbody").append(tr);
+
+</script>
